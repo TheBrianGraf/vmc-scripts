@@ -1,4 +1,19 @@
-# --- PLEASE NOTE THAT THIS REQUIRES L2 Stretch Network between your on-prem environment and VMC. Without the Layer2 VPN, vMotion will not work ---
+<#
+    .NOTES
+    ===========================================================================
+	 Created by:   	Brian Graf
+     Date:          January 8, 2018
+	 Organization: 	VMware
+     Blog:          brianjgraf.com
+     Twitter:       @vBrianGraf
+	===========================================================================
+
+	.DESCRIPTION
+    This will allow you to vMotion workloads from VMware Cloud on AWS to your on-premises environment
+
+	.NOTES
+    PLEASE NOTE THAT THIS REQUIRES L2 Stretch Network between your on-prem environment and VMC. Without the Layer2 VPN, vMotion will not work.
+#>
 
 # VMC 2 On-Prem
 # ------------- VARIABLES SECTION - EDIT THE VARIABLES BELOW ------------- 

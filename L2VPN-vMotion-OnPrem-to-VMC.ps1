@@ -1,3 +1,19 @@
+<#
+    .NOTES
+    ===========================================================================
+	 Created by:   	Brian Graf
+     Date:          January 8, 2018
+	 Organization: 	VMware
+     Blog:          brianjgraf.com
+     Twitter:       @vBrianGraf
+    ===========================================================================
+    
+	.DESCRIPTION
+    This will allow you to vMotion workloads from your on-premises environment to VMware Cloud on AWS.
+
+	.NOTES
+    PLEASE NOTE THAT THIS REQUIRES L2 Stretch Network between your on-prem environment and VMC. Without the Layer2 VPN, vMotion will not work.
+#>
 # ------------- VARIABLES SECTION - EDIT THE VARIABLES BELOW ------------- 
 $destinationvCenter = "vcenter.sddc-52-35-58-16.vmc.vmware.com"
 $destinationvCenterUser = "cloudadmin@vmc.local"
@@ -14,8 +30,6 @@ $SourcevCenterPassword = "VMware1!"
 # This is an easy way to select which VMs will vMotion up to VMC.
 $VMs = "BG_Ubuntu*"
 # ------------- END VARIABLES - DO NOT EDIT BELOW THIS LINE ------------- 
-
-# --- PLEASE NOTE THAT THIS REQUIRES L2 Stretch Network between your on-prem environment and VMC. Without the Layer2 VPN, vMotion will not work ---
 
 $destVCConn = Connect-VIServer -Server $destinationvCenter -Protocol https -User $destinationvCenterUser -Password $destinationvCenterPassword
 $sourceVCConn = connect-viserver $SourcevCenter -User $SourcevCenterUser -Password $SourcevCenterPassword
