@@ -8,4 +8,4 @@ This repo is primarily used for scripts that can be used for:
 * PoC Setups
 * and more
 
-Blog posts about these scripts will be found either at blogs.cloud.vmware.com or http://brianjgraf.com
+Blog posts about these scripts will be found either at http://blogs.cloud.vmware.com or http://brianjgraf.com
